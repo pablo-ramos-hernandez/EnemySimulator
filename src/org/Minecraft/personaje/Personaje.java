@@ -1,3 +1,7 @@
+package org.Minecraft.personaje;
+
+import org.Minecraft.acciones.Combate;
+
 public class Personaje implements Combate {
     private int salud;
     private int defensa;

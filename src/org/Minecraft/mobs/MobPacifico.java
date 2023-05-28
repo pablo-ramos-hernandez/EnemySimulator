@@ -1,3 +1,6 @@
+package org.Minecraft.mobs;
+
+import org.Minecraft.acciones.Danio;
 
 public abstract class MobPacifico extends Mob implements Danio {
 

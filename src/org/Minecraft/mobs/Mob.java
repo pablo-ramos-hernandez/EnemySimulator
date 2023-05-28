@@ -1,3 +1,5 @@
+package org.Minecraft.mobs;
+
 public abstract class Mob {
     protected int salud;
 

@@ -1,3 +1,7 @@
+package org.Minecraft.mobs.enderman;
+
+import org.Minecraft.mobs.MobHostil;
+
 public class Enderman extends MobHostil {
 
     public Enderman() {

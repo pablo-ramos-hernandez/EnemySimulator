@@ -1,3 +1,7 @@
+package org.Minecraft.mobs.zombie;
+
+import org.Minecraft.mobs.MobHostil;
+
 public class Zombie extends MobHostil {
     int fuerza;
 

@@ -1,3 +1,7 @@
+package org.Minecraft.mobs.oveja;
+
+import org.Minecraft.mobs.MobPacifico;
+
 public class Oveja extends MobPacifico {
 
     public Oveja(int salud) {

@@ -1,9 +1,13 @@
+package org.Minecraft.mobs;
+
+import org.Minecraft.acciones.Combate;
+
 public abstract class MobHostil extends Mob implements Combate {
     public MobHostil(int salud) {
         super(salud);
     }
 
-    int fuerza;
+    protected int fuerza;
 
     @Override
     public int atacar() {
