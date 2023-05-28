@@ -1,7 +1,7 @@
 public class Zombie extends MobHostil {
     int fuerza;
 
-    public Zombie(int salud, int fuerza) {
+    public Zombie() {
         super(12);
         this.fuerza = 4;
     }
