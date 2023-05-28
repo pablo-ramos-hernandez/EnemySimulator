@@ -2,7 +2,7 @@ public class Enderman extends MobHostil {
 
     public Enderman() {
         super(14);
-        this.fuerza = 14;
+        this.fuerza = 6;
     }
 
     @Override
