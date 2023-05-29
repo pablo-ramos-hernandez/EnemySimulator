@@ -16,7 +16,8 @@ public abstract class MobHostil extends Mob implements Combate {
 
     @Override
     public void recibirDanio(int ataque) {
-        int danioRecibido = salud - ataque;
+        int danioRecibido = ataque;
+        salud = salud - ataque;
         System.out.println("El danio recibido es de: " + danioRecibido + " y la salud es de: " + salud);
     }
 }
