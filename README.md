@@ -1,18 +1,3 @@
-## Getting Started
+## En esta práctica, una empresa de videojuegos quiere realizar una simulación de un género antiguo de juegos en el que el usuario interactuaba con la consola para cumplir un objetivo. En nuestro caso, se pretende simular la interacción del usuario con algunos mobs aleatorios del juego de Minecraft.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Esta practica cumple los principios de la segregacion porque cada clase no tiene metodos inutiles sino todo lo que incorporas lo utilizass
