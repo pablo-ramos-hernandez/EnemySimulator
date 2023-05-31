@@ -10,10 +10,12 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Bienvenido usuario al juego");
+        String mensaje = "";
         int arma;
         int armadura;
         int fuerza = 0;
         int defensa = 0;
+        int numeroAleatorio = (int) (Math.random() * 3 + 0);
 
         Personaje personaje = new Personaje(defensa, fuerza);
         System.out.println("Que armas desea utilizar estan son las opciones");
@@ -64,13 +66,13 @@ public class App {
         Zombie zombie = new Zombie();
         Oveja oveja = new Oveja();
         int contandorEnderman = 0;
+        int contandorZombie = 0;
+        int contandorOveja = 0;
 
-        int numeroAleatorio = (int) Math.random() * 2;
-
-        switch (0) {
+        switch (numeroAleatorio) {
             case 0:
-
-                while (personaje.getSalud() >= 0 || enderman.getSalud() >= 0) {
+                System.out.println("Los luchadores son el personaje y el enderman");
+                do {
                     enderman.recibirDanio(personaje.atacar());
                     int numeroAleatorioDeAtaque = (int) (Math.random() * 2);
 
@@ -80,11 +82,47 @@ public class App {
                         enderman.moverse();
                     }
                     contandorEnderman++;
+                } while (personaje.getSalud() >= 0 && enderman.getSalud() >= 0);
+                if (personaje.getSalud() >= 0) {
+                    mensaje = "el ganador es el personaje";
+                } else {
+                    mensaje = "el enderman es el ganador";
                 }
+                System.out.println("Han pasado " + contandorEnderman + " y  " + mensaje);
+                break;
+            case 1:
+                System.out.println("Los luchadores son el personaje y el zombie");
+                do {
+                    zombie.recibirDanio(personaje.atacar());
+                    int numeroAleatorioDeAtaque = (int) (Math.random() * 2);
+
+                    if (numeroAleatorioDeAtaque == 0) {
+                        personaje.recibirDanio(zombie.atacar());
+                    } else {
+                        zombie.moverse();
+                    }
+                    contandorZombie++;
+                } while (personaje.getSalud() >= 0 && zombie.getSalud() >= 0);
+                if (personaje.getSalud() >= 0) {
+                    mensaje = "el ganador es el personaje";
+                } else {
+                    mensaje = "el zombie es el ganador";
+                }
+                System.out.println("Han pasado " + contandorZombie + " y el " + mensaje);
+                break;
+            case 2:
+                System.out.println("Los luchadores son el personaje y el oveja");
+                do {
+                    oveja.recibirDanio(personaje.atacar());
+                    oveja.moverse();
+                    contandorOveja++;
+                } while (oveja.getSalud() >= 0);
+                if (personaje.getSalud() >= 0) {
+                    mensaje = "El ganador es el personaje";
+                }
+                System.out.println("Han pasado " + contandorOveja + " y el " + mensaje);
                 break;
         }
-        String mensaje = personaje.getSalud() > 0 ? "El ganador es el personaje" : "El ganador es el personaje";
-        System.out.println("Han pasado " + contandorEnderman + mensaje);
         scanner.close();
     }
 }

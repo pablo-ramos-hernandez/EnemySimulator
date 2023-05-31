@@ -10,6 +10,8 @@ public abstract class MobPacifico extends Mob implements Danio {
 
     @Override
     public void recibirDanio(int ataque) {
-        int danioRecibido = salud - ataque;
+        int danioRecibido = ataque;
+        salud -= danioRecibido;
+        System.out.println("El danio recibido es de: " + danioRecibido + " y la salud es de " + salud);
     }
 }

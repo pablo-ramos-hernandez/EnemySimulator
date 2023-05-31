@@ -1,5 +1,7 @@
 package org.Minecraft.personaje;
 
+import javax.xml.ws.WebServiceClient;
+
 import org.Minecraft.acciones.Combate;
 
 public class Personaje implements Combate {
@@ -20,14 +22,14 @@ public class Personaje implements Combate {
 
     @Override
     public void recibirDanio(int ataque) {
-        int danioRecibido = ataque - this.defensa;
-        salud = salud - danioRecibido;
-
+        int danioRecibido;
+        if (ataque > this.defensa) {
+            danioRecibido = ataque - this.defensa;
+        } else {
+            danioRecibido = this.defensa - ataque;
+        }
+        salud -= danioRecibido;
         System.out.println("El danio recibido ha sido de: " + danioRecibido + " y el personaje tiene: " + salud);
-    }
-
-    public int getSalud() {
-        return salud;
     }
 
     public void setDefensa(int defensa) {
@@ -46,4 +48,7 @@ public class Personaje implements Combate {
         return fuerza;
     }
 
+    public int getSalud() {
+        return salud;
+    }
 }
